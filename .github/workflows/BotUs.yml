@@ -77,7 +77,7 @@ jobs:
       
 # RUN THE BOT AGAIN FOR NO REASON AT ALL
     - name: Run the Bot again to ensure completeness
-      run: timeout 3000 python ms_rewards_farmer.py --headless --dont-check-for-updates --superfast --shuffle --skip-unusual --no-images --on-finish exit
+      run: timeout 6000 python ms_rewards_farmer.py --headless --dont-check-for-updates --superfast --shuffle --skip-unusual --no-images --on-finish exit
 
 # CHECK LOG_ACCOUNTS.TXT     
     - name: Check log after run
