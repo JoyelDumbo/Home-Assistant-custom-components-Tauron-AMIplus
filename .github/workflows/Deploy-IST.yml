@@ -3,7 +3,7 @@ name: Commit-IST
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 12 * * *' # every day at 3:30 pm IST
+    - cron: '0 15 * * *' # every day at 8:30 pm IST
 
   
 env:
