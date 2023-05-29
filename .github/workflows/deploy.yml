@@ -46,14 +46,14 @@ jobs:
         sudo apt-get install -y xvfb
         sudo apt install -y openvpn openvpn-systemd-resolved
         pip install -r requirements.txt
+        echo "$ACCOUNT" > accounts.json
         
     - name: Connect to VPN
       uses: "kota65535/github-openvpn-connect-action@v2"
       with:
         config_file: config.ovpn
-        
-    - name: Set secrets variable as environment variable
-      run: echo "$ACCOUNT" > accounts.json
+        username: ${{ secrets.OVPN_USERNAME }}
+        password: ${{ secrets.OVPN_PASSWORD }}
 
 
 # RUN THE BOT WITH DEFAULT COMMAND
